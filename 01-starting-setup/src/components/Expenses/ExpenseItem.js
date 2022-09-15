@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 
 import "./ExpenseItem.css";
 
-// THIS IS A PRESENTATIONAL/STATELESS/"DUMB" COMPONENT BC IT IS JUST HERE TO OUTPUT SOME DATA
+// THIS IS A PRESENTATIONAL/STATELESS/"DUMB" COMPONENT BC IT IS JUST HERE TO OUTPUT SOME DATA.
 
 const ExpenseItem = (props) => {
   return (
