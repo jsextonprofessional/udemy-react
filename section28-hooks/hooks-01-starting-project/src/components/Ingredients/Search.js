@@ -9,7 +9,7 @@ const Search = React.memo(props => {
   const inputRef = useRef();
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (enteredFilter === inputRef.current.value) {
         const query =
         enteredFilter.length === 0
@@ -32,6 +32,12 @@ const Search = React.memo(props => {
         });
       }
     }, 500);
+    // cleanup function
+    // more memory efficient
+    // makes sure that the timer is cleared when the component is unmounted.
+    return () => {
+      clearTimeout(timer);
+    };
   }, [enteredFilter, onLoadIngredients, inputRef]);
 
   return (
